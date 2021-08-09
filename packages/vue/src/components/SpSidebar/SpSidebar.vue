@@ -52,3 +52,16 @@ export default defineComponent({
 	},
 })
 </script>
+<style lang="scss" scoped>
+.sp {
+	&-hamburger,
+	&-sidebar {
+		transition: all 0.7s linear;
+		&__header,
+		&__content,
+		&__footer {
+			transition: all 0.7s linear;
+		}
+	}
+}
+</style>
