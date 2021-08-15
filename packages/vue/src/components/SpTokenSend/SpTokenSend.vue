@@ -25,12 +25,12 @@
 								<span class="sp-icon sp-icon-UpArrow" />
 							</div>
 							<div class="sp-token-send__main__rcpt__input sp-form-group">
-								<input
-									class="sp-input"
+								<SpInput
 									name="rcpt"
 									v-model="transfer.recipient"
 									placeholder="Recipient address..."
 									:disabled="!address"
+									:large="false"
 								/>
 							</div>
 							<div
@@ -168,6 +168,7 @@ import { defineComponent, PropType } from 'vue'
 import SpButton from '../SpButton'
 import SpAssets from '../SpAssets'
 import SpAmountSelect from '../SpAmountSelect'
+import SpInput from '../SpInput'
 import { Bech32 } from '@cosmjs/encoding'
 import { Amount, DenomTraces, Relayer } from '../../utils/interfaces'
 
@@ -195,6 +196,7 @@ export default defineComponent({
 		SpButton,
 		SpAmountSelect,
 		SpAssets,
+		SpInput,
 	},
 	props: {
 		address: {
