@@ -36,25 +36,8 @@ import useEnv from '../utils/useEnv'
 
 ### Keep in mind about enviroment
 ```
-It's defined at the `.env` file.
+It's defined at the `.env` file. Without `.env` there is localhost default.
 ```
-
-<Preview>
-  <Story name="Welcome/CheckEnviroment" parameters={{
-      viewMode: 'docs',
-  }}>
-    {{
-      setup() {
-        return { ...useEnv() }
-      },
-      template: `<div style="fontSize: 24px">
-        <div>apiTendermint: {{apiTendermint}}</div>
-        <div>apiCosmos: {{ apiCosmos }}</div>
-        <div>apiWS: {{ apiWS }}</div>
-      </div>`,
-    }}
-  </Story>
-</Preview>
 
 
 
