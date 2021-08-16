@@ -1,5 +1,5 @@
 import { SpAmountSelect } from '@starport/vue'
-import margin from './marginDecorator'
+import margin from '../utils/marginDecorator'
 
 export default {
 	title: 'Example/SpAmountSelect',

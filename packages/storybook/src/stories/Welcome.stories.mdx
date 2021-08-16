@@ -30,6 +30,31 @@ It streamlines UI development, testing, and documentation.
 ### Notice
 
 It use `@starport/vue` and `@starport/vuex` from [tendermint/vue monorepo](https://github.com/tendermint/vue).
-Keep in mind what blockchain enviroment you are using:
 
-### render here: import Enviroment from './Enviroment'
+import { Preview, Story } from '@storybook/addon-docs/blocks'
+import useEnv from '../utils/useEnv'
+
+### Keep in mind about enviroment
+```
+It's defined at the `.env` file.
+```
+
+<Preview>
+  <Story name="Welcome/CheckEnviroment" parameters={{
+      viewMode: 'docs',
+  }}>
+    {{
+      setup() {
+        return { ...useEnv() }
+      },
+      template: `<div style="fontSize: 24px">
+        <div>apiTendermint: {{apiTendermint}}</div>
+        <div>apiCosmos: {{ apiCosmos }}</div>
+        <div>apiWS: {{ apiWS }}</div>
+      </div>`,
+    }}
+  </Story>
+</Preview>
+
+
+

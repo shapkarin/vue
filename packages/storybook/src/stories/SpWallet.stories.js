@@ -1,10 +1,10 @@
 import { SpWallet } from '@starport/vue'
-import margin from './marginDecorator'
+import margin from '../utils/marginDecorator'
 
 export default {
 	title: 'Example/SpWallet',
 	component: SpWallet,
-	decorators: [margin],
+	decorators: [margin, () => ({ themplate: '<div style="width: 242px"><story/></div>' })],
 	argTypes: {
 		address: {
 			type: 'text'

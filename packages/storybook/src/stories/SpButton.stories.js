@@ -1,5 +1,5 @@
 import SpButton from '../../../vue/src/components/SpButton'
-import margin from './marginDecorator'
+import margin from '../utils/marginDecorator'
 
 export default {
 	title: 'Example/SpButton',

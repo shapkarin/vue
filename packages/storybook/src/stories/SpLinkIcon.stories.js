@@ -1,5 +1,5 @@
 import SpLinkIcon from '../../../vue/src/components/SpLinkIcon'
-import margin from './marginDecorator'
+import margin from '../utils/marginDecorator'
 
 const icons = [
 	'Download',

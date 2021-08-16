@@ -1,7 +1,6 @@
 import { SpTokenSend } from '@starport/vue'
-import margin from './marginDecorator'
-// import store from '.'
-import useWallet from './useWallet'
+import margin from '../utils/marginDecorator'
+import useWallet from '../utils/useWallet'
 
 export default {
 	title: 'Example/SpTokenSend',
