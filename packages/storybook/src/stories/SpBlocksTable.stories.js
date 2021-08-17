@@ -1,17 +1,25 @@
 import { SpBlocksTable } from '@starport/vue'
-
-import vuePropsToKnobs from 'vue-props-to-knobs'
-import { boolean, number, text, array, object, select } from '@storybook/addon-knobs'
-
-const propsToKnobs = vuePropsToKnobs({ boolean, number, text, array, object, select })
+import store from '../store'
 
 export default {
 	title: 'Example/SpBlocksTable',
-	component: SpBlocksTable
+	component: SpBlocksTable,
+	argTypes: {
+		blocks: {
+			type: 'array'
+		}
+	}
 }
 
-export const exampleWithKnobs = () => ({
+const Template = (args) => ({
 	components: { SpBlocksTable },
-	props: propsToKnobs(SpBlocksTable),
-	template: `<SpBlocksTable v-bind="$props" />`
+	setup() {
+		return { args }
+	},
+	template: `<SpBlocksTable v-bind="args" />`
 })
+
+export const BlocksProp = Template.bind({})
+BlocksProp.args = {
+	blocks: store.state.common.blocks.blocks
+}
