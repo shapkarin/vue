@@ -1,6 +1,10 @@
+// TODO: add docs with needed list of vuex state modules
+
 import { SpTokenSend } from '@starport/vue'
 import margin from '../utils/marginDecorator'
 import useWallet from '../utils/useWallet'
+
+import store from '../store'
 
 export default {
 	title: 'Example/SpTokenSend',
@@ -16,16 +20,17 @@ export default {
 const Template = (args) => ({
 	components: { SpTokenSend },
 	setup() {
+		// const { address } = useWallet()
+
 		return { args }
 	},
 	template: `<SpTokenSend v-bind="args" />`
 })
 
-export const Primary = Template.bind({})
-
 const { address } = useWallet()
-console.log({ address })
 
-Primary.args = {
-	address
+export const WithAddressProp = Template.bind({})
+console.log({ address })
+WithAddressProp.args = {
+	address: address.value
 }

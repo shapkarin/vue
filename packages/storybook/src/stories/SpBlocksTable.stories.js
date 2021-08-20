@@ -19,6 +19,7 @@ const Template = (args) => ({
 	template: `<SpBlocksTable v-bind="args" />`
 })
 
+export const Empty = Template.bind({})
 export const BlocksProp = Template.bind({})
 BlocksProp.args = {
 	blocks: store.state.common.blocks.blocks

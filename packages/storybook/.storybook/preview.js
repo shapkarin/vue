@@ -15,12 +15,12 @@ app.use(store).use(router).use(vueLib)
 async function beforeStory() {
 	return store.dispatch('common/env/init')
 
-	// force login
+	// maye be useful: force login
 	// const signer = window.getOfflineSigner(rootGetters['common/env/chainId'])
 	// await store.dispatch('common/wallet/connectWithKeplr', signer)
 }
 
-beforeStory().then(() => console.log('init story'))
+beforeStory().then(() => console.log('todo: state is ready, init stories'))
 
 
 export const parameters = {
